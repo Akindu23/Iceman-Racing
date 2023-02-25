@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+  <html lang="en">
+
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <title>Quiz</title>
+
+      <!-- Title Icon displayed on tab -->
+      <link rel="icon" href="Images/Iceman.png" type="image/x-icon">
+
+      <!-- CSS for Quiz Page and common elements -->
+      <link rel="stylesheet" href="CSS/QuizCSS.css" />
+      <link rel="stylesheet" href="CSS/common.css" />
+
+      <!-- JavaScripts for Quiz Page and Navigation Bar -->
+      <script src="scripts/navigation.js" defer></script>
+      <script src="scripts/QuizJS.js"></script>
+    </head>
+
+    <body>
+      <!-- Common Navigation bar used by all team members -->
+      <header id="primary-header-navigation">
+        <div id="logo"></div>
+        <button class="navigation-toggle">
+          <span class="sr-only">Menu</span> <!-- Screen Readers only -->
+        </button>
+        <nav class="navigation-bar">
+          <ul id="navigation-bar-ul" data-visible="false" class="navigation-bar-ul">
+            <li>
+              <!-- data-text will be written when you hover on the text -->
+              <a href="Main.html" class="nav-bar-titles" data-text="&nbsp;&nbsp;Home">&nbsp;&nbsp;Home</a>
+            </li>
+
+            <li>
+              <a href="gallery.html" class="nav-bar-titles" data-text="&nbsp;&nbsp;Gallery">&nbsp;&nbsp;Gallery</a>
+            </li>
+
+            <li>
+              <a href="StudentDetails.html" class="nav-bar-titles"
+                data-text="&nbsp;&nbsp;About&minus;Us">&nbsp;&nbsp;About&minus;Us
+              </a>
+            </li>
+
+            <li>
+              <a href="Quiz.html" class="nav-bar-titles" data-text="&nbsp;&nbsp;Quiz">&nbsp;&nbsp;Quiz</a>
+            </li>
+
+            <li>
+              <a href="buyMerch.html" class="nav-bar-titles" data-text="&nbsp;&nbsp;Products">&nbsp;&nbsp;Products</a>
+            </li>
+
+            <li>
+              <a href="ExtraContent.html" class="nav-bar-titles" data-text="&nbsp;&nbsp;History">&nbsp;&nbsp;History</a>
+            </li>
+
+            <li>
+              <a href="query.html" class="nav-bar-titles" data-text="&nbsp;&nbsp;Queries">&nbsp;&nbsp;Queries</a>
+            </li>
+
+            <li>
+              <a href="sitemap.html" class="nav-bar-titles"
+                data-text="&nbsp;&nbsp;site&minus;Map">&nbsp;&nbsp;Site&minus;Map
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Displaying Quiz Information -->
+      <div id="quiz-info">
+        <br>
+        <h2>Quiz Instructions ! </h2> 
+        <br>
+
+        <ul>
+          <li>This Quiz contains 10 questions.</li>
+          <li>You will score <b>2 marks </b> for each correct answer.</li>
+          <li>You will lose <b>1 mark </b>for each incorrect answer.</li>
+          <li>Final result will be displayed at the end of the quiz.</li>
+          <li>You have <b>1 minute</b> to complete the quiz.</li>
+        </ul>
+
+        <br><br><br>
+
+        <!-- Start Quiz Button -->
+        <input type="button" value="Start Quiz!" class="start-btn" onclick="start (); myFunction(); timer(); ">
+
+      </div>
+
+      <!-- Form inside div id="backgorund" to change background colour based on total score -->
+      <div id="background">
+        <div id="timer">Timer : <span id="time"></span> seconds</div>
+
+        <!-- Form containing all the questions and answer options for quiz -->
+        <form name="quiz" id="quiz-form"><br>
+
+          <p>1. Which Formula 1 driver has the record for the most consecutive wins? </p><br>
+          <p><input type="radio" name="q1" id="q1a" value=1><label for="q1a">Kimi Raikkonen</label></p>
+          <p><input type="radio" name="q1" id="q1b" value=2><label for="q1b">Fernando Alonso</label></p>
+          <p><input type="radio" name="q1" id="q1c" value=3><label for="q1c">Ayrton Senna</label></p>
+          <p><input type="radio" name="q1" id="q1d" value=4><label for="q1d">Sebastian Vettel</label></p>
+          <br>
+
+          <p>2. In which year was the first Formula One World Championship held?</p><br>
+          <p><input type="radio" name="q2" id="q2a" value=1><label for="q2a">1952</label></p>
+          <p><input type="radio" name="q2" id="q2b" value=2><label for="q2b">1951</label></p>
+          <p><input type="radio" name="q2" id="q2c" value=3><label for="q2c">1950</label></p>
+          <p><input type="radio" name="q2" id="q2d" value=4><label for="q2d">1949</label></p>
+          <br>
+
+          <p>3. Which Formula One circuit is nicknamed "The Temple of Speed"?</p><br>
+          <p><input type="radio" name="q3" id="q3a" value=1><label for="q3a">Silverstone</label></p>
+          <p><input type="radio" name="q3" id="q3b" value=2><label for="q3b">Monza</label></p>
+          <p><input type="radio" name="q3" id="q3c" value=3><label for="q3c">Suzuka</label></p>
+          <p><input type="radio" name="q3" id="q3d" value=4><label for="q3d">Monaco</label></p>
+          <br>
+
+          <p>4. Who won the 2021 Formula One World Championship?</p><br>
+          <p><input type="radio" name="q4" id="q4a" value=1><label for="q4a">Max Verstappen</label></p>
+          <p><input type="radio" name="q4" id="q4b" value=2><label for="q4b">Lewis Hamilton</label></p>
+          <p><input type="radio" name="q4" id="q4c" value=3><label for="q4c">Sebastian Vettel</label></p>
+          <p><input type="radio" name="q4" id="q4d" value=4><label for="q4d">Charles Leclerc</label></p>
+          <br>
+
+          <p>5. Which Formula One Driver has the most number of Grand Prix Starts?</p><br>
+          <p><input type="radio" name="q5" id="q5a" value=1><label for="q5a">Kimi Raikkonen</label></p>
+          <p><input type="radio" name="q5" id="q5b" value=2><label for="q5b">Fernando Alonso</label></p>
+          <p><input type="radio" name="q5" id="q5c" value=3><label for="q5c">Michael Schumacher</label></p>
+          <p><input type="radio" name="q5" id="q5d" value=4><label for="q5d">Lewis Hamilton</label></p>
+          <br>
+
+          <p>6. Who was the first driver to reach 7 World Championships? </p><br>
+          <p><input type="radio" name="q6" id="q6a" value=1><label for="q6a">Alain Prost</label></p>
+          <p><input type="radio" name="q6" id="q6b" value=2><label for="q6b">Michael Schumacher</label></p>
+          <p><input type="radio" name="q6" id="q6c" value=3><label for="q6c">Juan-Manuel Fangio</label></p>
+          <p><input type="radio" name="q6" id="q6d" value=4><label for="q6d">Lewis Hamilton</label></p>
+          <br>
+
+          <p>7. How old was Max Verstappen when he became the youngest Grand Prix winner in 2016?</p><br>
+          <p><input type="radio" name="q7" id="q7a" value=1><label for="q7a">20 years old</label></p>
+          <p><input type="radio" name="q7" id="q7b" value=2><label for="q7b">19 years old</label></p>
+          <p><input type="radio" name="q7" id="q7c" value=3><label for="q7c">18 years old</label></p>
+          <p><input type="radio" name="q7" id="q7d" value=4><label for="q7d">17 years old</label></p>
+          <br>
+
+          <p>8. Which team has won the most World Constructors Championships?</p><br>
+          <p><input type="radio" name="q8" id="q8a" value=1><label for="q8a">Mercedes</label></p>
+          <p><input type="radio" name="q8" id="q8b" value=2><label for="q8b">McLaren</label></p>
+          <p><input type="radio" name="q8" id="q8c" value=3><label for="q8c">Williams</label></p>
+          <p><input type="radio" name="q8" id="q8d" value=4><label for="q8d">Ferrari</label></p>
+          <br>
+
+          <p>9. Which driver won the 2007 Drivers Championship by just 1 point?</p><br>
+          <p><input type="radio" name="q9" id="q9a" value=1><label for="q9a">Fernando Alonso</label></p>
+          <p><input type="radio" name="q9" id="q9b" value=2><label for="q9b">Kimi Raikkonen</label></p>
+          <p><input type="radio" name="q9" id="q9c" value=3><label for="q9c">Felipe Massa</label></p>
+          <p><input type="radio" name="q9" id="q9d" value=4><label for="q9d">Lewis Hamilton</label></p>
+          <br>
+
+          <p>10. In their first year in Formula 1 Brawn GP won both Drivers and Constructors Championships. In which year
+            did they achieve this?</p><br>
+          <p><input type="radio" name="q10" id="q10a" value=1><label for="q10a">2011</label></p>
+          <p><input type="radio" name="q10" id="q10b" value=2><label for="q10b">2015</label></p>
+          <p><input type="radio" name="q10" id="q10c" value=3><label for="q10c">2009</label></p>
+          <p><input type="radio" name="q10" id="q10d" value=4><label for="q10d">2014</label></p>
+          <br>
+
+          <!-- Submit button for Quiz -->
+          <input type="submit" value="Submit" class="sumbit-btn" onclick="endQuiz(); stop(); this.disabled = true;">
+        </form>
+
+        <!-- Used to display the results section after submitting quiz -->
+        <div id="results"></div>
+
+      </div>
+
+      <button id="top-btn" onclick="scrollToTop();">Back to Top</button>
+
+      <!-- JavaScript used for Back to Top Button -->
+      <script>
+        var toTopButton = document.getElementById("top-btn");
+
+        window.onscroll = function () { showButton() };
+
+        //When the user scrolls past 30px from the top of the browser the Back to Top button will appear. 
+        function showButton() {
+          if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+            toTopButton.style.display = "block";
+          } else {
+            toTopButton.style.display = "none";
+          }
+        }
+
+        function scrollToTop() {
+          document.documentElement.scrollTop = 0;
+          document.body.scrollTop = 0;
+        }
+      </script>
+
+      <!-- Common footer used by all members -->
+      <footer>
+        <p>Page Editor: <a href="Akindu.html"><span>Akindu Karunaratne</span></a></p>
+        <p>Copyright &copy; 2022 Iceman Racing | All Rights Reserved.</p>
+        <p>Last Updated: 17/07/2022</p>
+      </footer>
+
+    </body>
+</html>

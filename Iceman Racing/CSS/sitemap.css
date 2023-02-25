@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url(Images/sitemapbg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.sitemap {
+    width: fit-content;
+    height: 480px;
+    margin: auto;
+}
+
+svg {
+    margin: auto;
+}
+
+
+.properties {
+    height: 90%;
+}
+
+line {
+    stroke: #ffeb00;
+    stroke-width: 2;
+}
+
+.rectangle rect {
+    fill: #871010;
+    transition: fill 0.4s, stroke 0.5s;
+    fill-opacity: 50%;
+
+}
+
+.rectangle:hover rect {
+    fill: gray;
+    cursor: pointer;
+}
+
+.svg-text {
+    font-weight: 600;
+}
+
+.svg-text:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,186 @@
+/* Common CSS used for all members. Navigation Bar, Page Font, Footer */
+
+@font-face {
+  font-family: f1Font;
+  src: url(Formula1-Regular.ttf);
+}
+
+body {
+  background-image: linear-gradient(270deg, black 0%, #28282B);
+}
+
+* {
+  font-family: f1Font;
+  margin: 0;
+  padding: 0;
+}
+
+#logo {
+  background-image: url("Images/Iceman.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 160px;
+  height: 80px;
+  margin-top: 20px;
+}
+
+#primary-header-navigation,
+.navigation-bar-ul {
+  display: flex;
+  gap: 2em;
+}
+
+#primary-header-navigation {
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+}
+
+.navigation-bar-ul {
+  list-style: none;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  background: hsl(0 0% 100% / 0.1);
+  -webkit-backdrop-filter: blur(0.7rem);
+  backdrop-filter: blur(0.7rem);
+  color: rgb(0, 0, 0);
+}
+
+.navigation-bar-ul a.nav-bar-titles {
+  position: relative;
+  line-height: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(190, 120, 120);
+}
+
+/* attr(data-text) will get the respective text in the html tag's data-text attribute */
+/* because of the width value these text will be hidden until someone hover */
+.navigation-bar-ul a.nav-bar-titles::before {
+  font-family: f1Font;
+  content: attr(data-text);
+  position: absolute;
+  color: rgb(255, 0, 0);
+  width: 0;
+  overflow: hidden;
+  transition: 1s;
+  border-right: 4px solid rgb(255, 0, 0);
+  -webkit-text-stroke: 1px rgb(255, 0, 0);
+}
+
+.navigation-bar-ul a.nav-bar-titles:hover::before {
+  width: 100%;
+  filter: drop-shadow(0 0 25px rgb(255, 0, 0));
+}
+
+.navigation-bar-ul a.nav-bar-titles:active {
+  transform: translateX(-7px);
+}
+
+.navigation-toggle {
+  display: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
+}
+
+.navigation-bar-ul .nav-bar-titles {
+  text-decoration: none;
+  color: rgb(255, 0, 0);
+}
+
+@media (min-width: 87em) and (max-width: 125em) {
+  .navigation-bar-ul a.nav-bar-titles {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (min-width: 87em) {
+  .navigation-bar-ul {
+    gap: clamp(1rem, 5vw, 3rem);
+    padding-block: 2rem;
+    padding-inline: clamp(3rem, 8vw, 10rem);
+  }
+}
+
+@media (max-width: 87em) {
+  .navigation-bar-ul {
+    position: fixed;
+    z-index: 1000;
+    gap: 2em;
+    /* shorthand for margin to bottom left right */
+    inset: 0 0 0 30%;
+    /* this will change the flex direction */
+    flex-direction: column;
+    /* this will choose the smaller of the two */
+    padding: min(30vh, 10rem) 2em;
+    /* once you got to 10rem it will locked it*/
+    transform: translateX(100%);
+    transition: transform 350ms ease-in;
+  }
+
+  /* when the navigation.js change the data-visible attribute this will be applied */
+  .navigation-bar-ul[data-visible="true"] {
+    transform: translateX(50%);
+  }
+
+  .navigation-toggle {
+    display: block;
+    position: fixed;
+    z-index: 9999;
+    background-color: transparent;
+    background: url("Images/icon-bars.svg");
+    background-repeat: no-repeat;
+    width: 2rem;
+    border: 0;
+    aspect-ratio: 1;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  /* if the area-expanded true close svg will be shown */
+  .navigation-toggle[aria-expanded="true"] {
+    background-image: url("Images/icon-close.svg");
+  }
+}
+
+footer {
+  font-family: f1Font;
+  color: #fff;
+  background-image: radial-gradient(circle, #131414, #860819, #131414);
+  text-align: center;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: rgba(151, 151, 151, 0.6);
+  padding-top: 10px;
+  padding-bottom: 8px;
+  width: 100%;
+  font-size: 14px;
+  color: #ffeb00;
+}
+
+footer a {
+  text-decoration: none;
+  color: #ffeb00;
+
+}
+
+footer a:hover {
+  color: rgb(255, 255, 255);
+  transition: all 0.5s ease 0s;
+}
+
+footer p {
+  font-size: 16px;
+  margin: 10px 0;
+}

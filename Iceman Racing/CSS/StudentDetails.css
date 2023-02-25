@@ -1,0 +1,74 @@
+/* Heading styles */
+h1, h4 {
+   text-align: center;
+   color: #ffeb00;
+}
+
+/* Styling section where team members are displayed  */
+.container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   min-height: 96px;
+   position: relative;
+   margin: 40px 0;
+   color: #ffeb00;
+}
+
+/* Styling each team member card displayed */
+.card {
+   position: relative;
+   width: 320px;
+   height: 400px;
+   background: #28282b;
+   margin: 20px;
+   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+   border-radius: 15px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* Styling content within the team member card (Image of Student and Details) */
+.content {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+/* Student name and Student role styling. */
+.content-box p {
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   text-align: center;
+   margin: 20px 0 10px;
+   opacity: 0;
+}
+
+/* Style to display student details when mouse hovered over the card of that team member */
+.card:hover .content-box p{
+   opacity: 1;
+   transition: 0.5s;
+}
+
+/* Styling team member images */
+.img-box {
+   position: relative;
+   width: 250px;
+   height: 250px;
+   border-radius: 50%;
+   overflow: hidden;
+   border: 10px solid rgba(0, 0, 0, 0.25);
+}
+
+.img-box img {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}

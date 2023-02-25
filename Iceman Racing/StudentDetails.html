@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+   <html lang="en">
+
+      <head>
+         <meta charset="UTF-8" />
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+         <title>Student Details</title>
+
+         <!-- Title Icon displayed on tab -->
+         <link rel="icon" href="Images/Iceman.png" type="image/x-icon">
+
+         <!-- CSS for Student Details Page and common elements -->
+         <link rel="stylesheet" href="CSS/StudentDetails.css" />
+         <link rel="stylesheet" href="CSS/common.css" />
+         
+         <!-- JavaScript for Navigation Bar -->
+         <script src="scripts/navigation.js" defer></script>
+      </head>
+
+      <body>
+         <!-- Common Navigation bar used by all team members -->
+         <header id="primary-header-navigation">
+            <div id="logo"></div>
+            <button class="navigation-toggle">
+               <span class="sr-only">Menu</span>   <!-- only screen readers will read -->
+            </button>
+            <nav class="navigation-bar">
+               <ul id="navigation-bar-ul" data-visible="false" class="navigation-bar-ul">
+                  <li>
+                     <!-- data-text will be written when you hover on the text -->
+                     <a href="Main.html" class="nav-bar-titles" data-text="&nbsp;&nbsp;Home">&nbsp;&nbsp;Home</a>
+                  </li>
+
+                  <li>
+                     <a href="gallery.html" class="nav-bar-titles" data-text="&nbsp;&nbsp;Gallery">&nbsp;&nbsp;Gallery</a>
+                  </li>
+
+                  <li>
+                     <a href="StudentDetails.html" class="nav-bar-titles"
+                        data-text="&nbsp;&nbsp;About&minus;Us">&nbsp;&nbsp;About&minus;Us
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="Quiz.html" class="nav-bar-titles" data-text="&nbsp;&nbsp;Quiz">&nbsp;&nbsp;Quiz</a>
+                  </li>
+
+                  <li>
+                     <a href="buyMerch.html" class="nav-bar-titles"
+                        data-text="&nbsp;&nbsp;Products">&nbsp;&nbsp;Products</a>
+                  </li>
+
+                  <li>
+                     <a href="ExtraContent.html" class="nav-bar-titles"
+                        data-text="&nbsp;&nbsp;History">&nbsp;&nbsp;History</a>
+                  </li>
+
+                  <li>
+                     <a href="query.html" class="nav-bar-titles" data-text="&nbsp;&nbsp;Queries">&nbsp;&nbsp;Queries</a>
+                  </li>
+
+                  <li>
+                     <a href="sitemap.html" class="nav-bar-titles"
+                        data-text="&nbsp;&nbsp;site&minus;Map">&nbsp;&nbsp;Site&minus;Map
+                     </a>
+                  </li>
+
+               </ul>
+            </nav>
+         </header>
+
+         <h1>Meet our Team</h1>
+         <h4>Team G-4</h4>
+
+         <!-- Containter class includes all details and images of members -->
+         <div class="container">
+            
+            <!-- Card class used to display team members -->
+            <div class="card">
+               <div class="content">
+
+                  <!-- img-box class is used to display the image of the member -->
+                  <div class="img-box">
+                     <a href="Damma.html" target="_blank"><img src="Images/damma.jpeg" alt="damma"></a>
+                  </div>
+
+                  <!-- content-box class used to display member details when mouse hovered -->
+                  <div class="content-box">
+                     <p>Student 1<br><br>Damma Monnankulama</p>
+                  </div>
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="content">
+                  <div class="img-box">
+                     <a href="Tharusha.html" target="_blank"><img src="Images/tharusha.jpeg" alt="tharusha"></a>
+                  </div>
+                  <div class="content-box">
+                     <p>Student 2<br><br>Tharusha Gunawardena</p>
+                  </div>
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="content">
+                  <div class="img-box">
+                     <a href="Akindu.html" target="_blank"><img src="Images/akindu.jpg" alt="akindu"></a>
+                  </div>
+                  <div class="content-box">
+                     <p>Student 3<br><br>Akindu Karunaratne</p>
+                  </div>
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="content">
+                  <div class="img-box">
+                     <a href="Sayuni.html" target="_blank"><img src="Images/sayuni.jpeg" alt="sayuni"></a>
+                  </div>
+                  <div class="content-box">
+                     <p>Student 4<br><br>Sayuni Wijesinghe</p>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+
+         <footer>
+            <p>Page Editor: <a href="Akindu.html"><span>Akindu Karunaratne</span></a></p>
+            <p>Copyright &copy; 2022 Iceman Racing | All Rights Reserved.</p>
+            <p>Last Updated: 17/07/2022</p>
+         </footer>
+
+      </body>
+
+</html>

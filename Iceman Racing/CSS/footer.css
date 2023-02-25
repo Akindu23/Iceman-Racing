@@ -1,0 +1,35 @@
+@font-face {
+  font-family: f1Font;
+  src: url(Formula1-Regular.ttf);
+}
+
+footer {
+  font-family: f1Font;
+  color: #fff;
+  background-image: radial-gradient(circle, #131414, #860819, #131414);
+  text-align: center;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: rgba(151, 151, 151, 0.6);
+  padding-top: 10px;
+  padding-bottom: 8px;
+  width: 100%;
+  font-size: 14px;
+  color: #ffeb00;
+}
+
+footer a {
+  text-decoration: none;
+  color: #ffeb00;
+
+}
+
+footer a:hover {
+  color: rgb(255, 255, 255);
+  transition: all 0.5s ease 0s;
+}
+
+footer p {
+  font-size: 16px;
+  margin: 10px 0;
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title> Iceman Racing </title>
+
+    <link rel="stylesheet" href="CSS/Main.css" />
+    <link rel="stylesheet" href="CSS/common.css" />
+    <link rel="icon" href="Images/Iceman.png" type="image/x-icon">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+</head>
+
+<body>
+    <header id="primary-header-navigation">
+        <div id="logo"></div>
+        <!-- area-controls the specific id and when you click the button area-expanded will be true -->
+        <button class="navigation-toggle">
+            <!-- only screen readers will read -->
+            <span class="sr-only">Menu</span>
+        </button>
+        <nav class="navigation-bar">
+            <ul id="navigation-bar-ul" data-visible="false" class="navigation-bar-ul">
+                <li>
+                    <!-- data-text will be written when you hover on the text -->
+                    <a href="Main.html" class="nav-bar-titles" data-text="&nbsp;&nbsp;Home">&nbsp;&nbsp;Home</a>
+                </li>
+
+                <li>
+                    <a href="gallery.html" class="nav-bar-titles"
+                        data-text="&nbsp;&nbsp;Gallery">&nbsp;&nbsp;Gallery</a>
+                </li>
+
+                <li>
+                    <a href="StudentDetails.html" class="nav-bar-titles"
+                        data-text="&nbsp;&nbsp;About&minus;Us">&nbsp;&nbsp;About&minus;Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Quiz.html" class="nav-bar-titles" data-text="&nbsp;&nbsp;Quiz">&nbsp;&nbsp;Quiz</a>
+                </li>
+
+                <li>
+                    <a href="buyMerch.html" class="nav-bar-titles"
+                        data-text="&nbsp;&nbsp;Products">&nbsp;&nbsp;Products</a>
+                </li>
+
+                <li>
+                    <a href="ExtraContent.html" class="nav-bar-titles"
+                        data-text="&nbsp;&nbsp;History">&nbsp;&nbsp;History</a>
+                </li>
+
+                <li>
+                    <a href="query.html" class="nav-bar-titles" data-text="&nbsp;&nbsp;Queries">&nbsp;&nbsp;Queries</a>
+                </li>
+
+                <li>
+                    <a href="sitemap.html" class="nav-bar-titles"
+                        data-text="&nbsp;&nbsp;site&minus;Map">&nbsp;&nbsp;Site&minus;Map
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="slide-container zoom-in">
+        <div class="slides fade">
+            <div class="slide-image">
+
+                <img src="Images/slideshow1.jpg" alt="slide1" />
+            </div>
+            <div id="img-slide-1" class="image-title zoom-out">
+            </div>
+        </div>
+        <div class="slides fade">
+            <div class="slide-image">
+                <img src="Images/slideshow2.jpg" alt="slide2" />
+            </div>
+            <div id="img-slide-2" class="image-title zoom-out">
+            </div>
+        </div>
+        <div class="slides fade">
+            <div class="slide-image">
+                <img src="Images/slideshow3.jpg" alt="slide3" />
+            </div>
+            <div id="img-slide-3" class="image-title zoom-out">
+            </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <div class="aboutAlign">
+        <div class="container reveal">
+            <h1 id="about" class="heading-title">
+                Who we Are
+
+            </h1>
+            <div class="about">
+                <div class="team-image">
+                    <img src="Images/team.jpg" alt="team" />
+                </div>
+
+                <div class="content">
+                    <p>
+                        We are Iceman Racing. Founded in 1992, this upcoming season will be our 30th
+                        in the Formula One™ World Championship. This is a team with both a rich heritage and a fresh
+                        perspective – bringing new energy to the sport with a determination to shake up the order and
+                        compete
+                        at the sharp end. We are all in, and everyone is welcome.
+                    </p><br>
+                    <button id="main-btn1">Gallery</button>
+                    <button id="main-btn2">History</button>
+                    <button id="main-btn3">Buy our Merch</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <h1 class="heading-title">
+        Meet Our Drivers
+    </h1>
+    <div class="about">
+        <div class="image">
+            <img src="Images/kimi.jpg" alt="kimi">
+        </div>
+        <div class="content">
+            <h3>Kimi Räikkönen</h3>
+            <p>
+                Legendary Formula 1 Driver and 2007 World Champion Kimi Räikkönen leads the Iceman Racing Formula One™
+                Team determined to share his race-winning and title-winning experience as Formula
+                One undergoes a technical revolution in 2022.
+            </p>
+        </div>
+
+
+        <div class="image">
+            <img src="Images/seb.jpg" alt="Vettel">
+        </div>
+
+        <div class="content">
+            <h3>Sebastian Vettel</h3>
+            <p>
+                Four-time World Champion Sebastian Vettel completes the Iceman Racing Formula One™
+                Team driver line-up. This will be his 8th season with our team and is keen to defend the Drivers World Championship he won in 2021.
+            </p>
+        </div>
+    
+    </div><br>
+
+    <h1 class="heading-title">Our Sponsors</h1>
+        
+        <div class="sponsor">
+            <img src="Images/sponsors.png" alt="sponsors">
+        </div>
+
+    <button id="top-btn" onclick="scrollToTop();">Back to Top</button>
+
+    <script>
+        let toTopButton = document.getElementById("top-btn");
+
+        window.onscroll = function () { showButton() };
+
+        function showButton() {
+            if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+                toTopButton.style.display = "block";
+            } else {
+                toTopButton.style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            document.documentElement.scrollTop = 0; // Safari
+            document.body.scrollTop = 0;
+        }
+    </script>
+
+    <footer>
+        <ul class="social_icon">
+            <li>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/home" target="_blank">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/" target="_blank">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li><a href="#logo">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="buyMerch.html">Products</a></li>
+            <li><a href="StudentDetails.html">Team</a></li>
+            <li><a href="query.html">Contact</a></li>
+        </ul>
+        <p>Copyright &copy; 2022 Iceman Racing | All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

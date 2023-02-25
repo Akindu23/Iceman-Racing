@@ -1,0 +1,62 @@
+@font-face {
+  font-family: f1Font;
+  src: url(Formula1-Regular.ttf);
+}
+
+* {
+  color: #ffeb00;
+  font-family: f1Font;
+}
+
+body {
+  /* background-image: linear-gradient(270deg, black 0%, #28282B); */
+  background-image: url("Images/presentationbg.jpg");
+  background-position: top;
+  background-size: cover;
+}
+
+img {
+  position: relative;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 50vh;
+}
+
+#title {
+  margin-top: 50px;
+  margin-bottom: 5%;
+}
+
+h1 {
+  text-align: center;
+}
+
+#member-list {
+  text-align: center;
+}
+
+.member {
+  font-size: 28px;
+  background-image: linear-gradient(120deg, #131414, #860819);
+  display: inline-block;
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 20px;
+  border: solid 2px #28282B;
+}
+
+.uow-id,
+.iit-id {
+  position: relative;
+  top: 8px;
+  border-radius: 20px;
+  padding: 10px;
+  letter-spacing: 5px;
+  background-color: #000000;
+  font-size: 1.5rem;
+  font-family: f1Font;
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery</title>
+    <link rel="stylesheet" href="CSS/gallery.css">
+    <link rel="stylesheet" href="CSS/nav.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="shortcut icon" href="Images/Iceman.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <script src="scripts/navigation.js" defer></script>
+</head>
+
+<body>
+    <header id="primary-header-navigation">
+        <div id="logo"></div>
+        <!-- area-controls the specific id and when you click the button area-expanded will be true -->
+        <button class="navigation-toggle">
+            <!-- only screen readers will read -->
+            <span class="sr-only">Menu</span>
+        </button>
+        <nav class="navigation-bar">
+            <ul id="navigation-bar-ul" data-visible="false" class="navigation-bar-ul">
+                <li>
+                    <!-- data-text will be written when you hover on the text -->
+                    <a href="Main.html" class="nav-bar-titles" data-text="&nbsp;&nbsp;Home">&nbsp;&nbsp;Home</a>
+                </li>
+
+                <li>
+                    <a href="gallery.html" class="nav-bar-titles"
+                        data-text="&nbsp;&nbsp;Gallery">&nbsp;&nbsp;Gallery</a>
+                </li>
+
+                <li>
+                    <a href="StudentDetails.html" class="nav-bar-titles"
+                        data-text="&nbsp;&nbsp;About&minus;Us">&nbsp;&nbsp;About&minus;Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Quiz.html" class="nav-bar-titles" data-text="&nbsp;&nbsp;Quiz">&nbsp;&nbsp;Quiz</a>
+                </li>
+
+                <li>
+                    <a href="buyMerch.html" class="nav-bar-titles"
+                        data-text="&nbsp;&nbsp;Products">&nbsp;&nbsp;Products</a>
+                </li>
+
+                <li>
+                    <a href="ExtraContent.html" class="nav-bar-titles"
+                        data-text="&nbsp;&nbsp;History">&nbsp;&nbsp;History</a>
+                </li>
+
+                <li>
+                    <a href="query.html" class="nav-bar-titles" data-text="&nbsp;&nbsp;Queries">&nbsp;&nbsp;Queries</a>
+                </li>
+
+                <li>
+                    <a href="sitemap.html" class="nav-bar-titles"
+                        data-text="&nbsp;&nbsp;site&minus;Map">&nbsp;&nbsp;Site&minus;Map
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div id="changeclr">
+        <div class="bgclrchange">
+            <label for="bgclr" id="label" style="color: #ffeb00">Background colour</label>
+            <select id="bgclr" onchange="backgroundcolorselect(this.form)">
+                <option value="Black">Black</option>
+                <option value="Green">Green</option>
+                <option value="Blue">Blue</option>
+                <option value="Red">Red</option>
+                <option value="Yellow">Yellow</option>
+            </select>
+        </div>
+        <div class="txtclrchange">
+            <label for="txtclr" id="label1" style="color: #ffeb00">Text colour</label>
+            <select id="txtclr" onchange="textcolorselect(this.form)">
+                <option value="Yellow">Yellow</option>
+                <option value="White">White</option>
+                <option value="Black">Black</option>
+                <option value="Green">Green</option>
+                <option value="Blue">Blue</option>
+                <option value="Red">Red</option>
+            </select>
+        </div>
+
+        <h1 class="heading" id="heading" style="color: #ffeb00">Gallery</h1><br>
+
+        <div class="gallery">
+            <img src="Images/gallery1.jpg" alt="helmet" id="img1" />
+            <img src="Images/gallery2.jpg" alt="track" id="img2" />
+            <img src="Images/gallery3.jpg" alt="trophy" id="img3" />
+            <img src="Images/gallery4.jpg" alt="senna" id="img4" />
+            <img src="Images/gallery5.jpg" alt="crash" id="img5" />
+        </div>
+
+        <div class="preview" id="preview">
+            <img src="Images/gallery1.jpg" alt="default" id="preview-img" />
+            <div class="close-preview" onclick="closePreview()">
+                <i class="far fa-times-circle"></i>
+            </div>
+            <div id="description"></div>
+        </div>
+    </div>
+
+    <button id="top-btn" onclick="scrollToTop();">Back to Top</button>
+
+    <script>
+        function getSelectedValue(selectList) {
+            return selectList[selectList.selectedIndex].value;
+        }
+
+        function backgroundcolorselect(formRef) {
+            var selectedValue = getSelectedValue(bgclr);
+            document.getElementById("changeclr").style.color = "white";
+            switch (selectedValue) {
+                case "Black":
+                    document.body.style.backgroundColor = "black";
+                    break;
+                case "Green":
+                    document.body.style.backgroundColor = "#009933";
+                    break;
+                case "Blue":
+                    document.body.style.backgroundColor = "#0039e6";
+                    break;
+                case "Red":
+                    document.body.style.backgroundColor = "#cc0000";
+                    break;
+                case "Yellow":
+                    document.body.style.backgroundColor = " #e6e600";
+                    break;
+            }
+        }
+
+        function textcolorselect(formRef) {
+            var selectedValue = getSelectedValue(txtclr);
+            document.getElementById("description").style.color = "white";
+            document.getElementById("heading").style.color = "white";
+            document.getElementById("label").style.color = "white";
+            document.getElementById("label1").style.color = "white";
+            switch (selectedValue) {
+                case "Black":
+                    document.getElementById("description").style.color =
+                        "black";
+                    document.getElementById("heading").style.color =
+                        "black";
+                    document.getElementById("label").style.color = "black";
+                    document.getElementById("label1").style.color = "black";
+                    break;
+                case "Green":
+                    document.getElementById("description").style.color =
+                        "#00ff00";
+                    document.getElementById("heading").style.color =
+                        "#00ff00";
+                    document.getElementById("label").style.color =
+                        "#00ff00";
+                    document.getElementById("label1").style.color =
+                        "#00ff00";
+                    break;
+                case "Blue":
+                    document.getElementById("description").style.color =
+                        "blue";
+                    document.getElementById("heading").style.color = "blue";
+                    document.getElementById("label").style.color = "blue";
+                    document.getElementById("label1").style.color = "blue";
+                    break;
+                case "Red":
+                    document.getElementById("description").style.color =
+                        "red";
+                    document.getElementById("heading").style.color = "red";
+                    document.getElementById("label").style.color = "red";
+                    document.getElementById("label1").style.color = "red";
+                    break;
+                case "Yellow":
+                    document.getElementById("description").style.color =
+                        "yellow";
+                    document.getElementById("heading").style.color =
+                        "yellow";
+                    document.getElementById("label").style.color = "yellow";
+                    document.getElementById("label1").style.color =
+                        "yellow";
+                    break;
+            }
+        }
+        var preview = document.getElementById("preview");
+        var previewImg = document.getElementById("preview-img");
+        var description = document.getElementById("description");
+        let gallery = document.querySelectorAll(".gallery > img");
+        const imagDescriptions = {
+            img1: "Today F1 helmets consist of a hard outer layer made of carbon fiber. Inside the helmet is a thick layer of polystyrene that sits snugly around the driver's head. The polystyrene acts as a shock absorber. F1 drivers also wear specialty balaclavas that offer extra safety features and comfort underneath their helmets.The image shows the helmet worn by Kimi Raikkonen in 2007 when he won the world championship.",
+            img2: "The image shows the legendary F1 Circuit, Spa-Francorchamps.  The original, triangle-shaped track was built in 1921, with designers Jules de Thier and Henri Langlois van Ophem using public roads between the towns of Francorchamps, Malmedy, and Stavelot to create an amazing 14.9km circuit taking in the forests and rolling hills of the beautiful Ardennes region. The track was redeveloped in 1979, and although the new circuit is only half the original's length, it’s still the longest on the current calendar at 7.004km",
+            img3: "The Monaco Grand Prix  is a Formula One motor racing event held annually on the Circuit de Monaco, in late May or early June. Run since 1929, it is widely considered to be one of the most important and prestigious automobile races in the world, and is one of the races—along with the Indianapolis 500 and the 24 Hours of Le Mans—that form the Triple Crown of Motorsport.  The image shows the trophy given to the winner of the Monaco Grand Prix which the design of it is same as the circuit.",
+            img4: "Ayrton Senna da Silva was a Brazilian racing driver who won the Formula One World Drivers' Championship in 1988, 1990, and 1991. Senna is one of three Formula One drivers from Brazil to win the World Championship and won 41 Grands Prix and 65 pole positions. For many, Ayrton Senna was the greatest racing driver who ever lived. His death, on May 1st 1994, not only reverberated throughout the motorsport community, it sent shockwaves around the world.",
+            img5: "A high-octane sport like Formula One comes with it’s own set of challenges –out of which the greatest will definitely be the threat it poses to human life. Despite all the precautions and the technological advancements in F1, the sport will always carry an element of risk to it that can explode at any moment. This of course, contributes to the thrill of the sport but it is important to appreciate the risk the racers carry at any given moment for our entertainment.",
+        };
+
+        gallery.forEach(function (item) {
+            item.addEventListener("mouseover", function () {
+                preview.style.display = "flex";
+                previewImg.src = item.src;
+                description.innerHTML = imagDescriptions[item.id];
+            });
+        });
+
+        function closePreview() {
+            preview.style.display = "none";
+        }
+
+        var toTopButton = document.getElementById("top-btn");
+
+        window.onscroll = function () { showButton() };
+
+        function showButton() {
+            if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+                toTopButton.style.display = "block";
+            } else {
+                toTopButton.style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            document.documentElement.scrollTop = 0; // Safari
+            document.body.scrollTop = 0;
+        }
+    </script>
+    <br><br>
+    <footer>
+        <p>Page Editor: <a href="Sayuni.html"><span>Sayuni Wijesinghe</span></a></p>
+        <p>Copyright &copy; 2022 Iceman Racing | All Rights Reserved.</p>
+        <p>Last Updated: 17/07/2022</p>
+    </footer>
+</body>
+
+</html>
